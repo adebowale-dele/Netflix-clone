@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="images/netflix-icon.png" type="image/png" />
   <title>Netflix Clone</title>
 </head>
@@ -12,230 +12,179 @@
   <!-- Sidebar Navigation -->
   <aside class="sidebar">
     <div class="sidebar-icon">
-      <!-- Search -->
-      <img src="icons/search.svg" class="sidebar-icon">
+      <img src="icons/search.svg" class="sidebar-icon" alt="Search Icon">
     </div>
-
     <div class="sidebar-icon">
-      <!-- Home -->
-      <img src="icons/home.svg" class="sidebar-icon">
+      <img src="icons/home.svg" class="sidebar-icon" alt="Home Icon">
       <div class="active"></div>
     </div>
-
     <div class="sidebar-icon">
-      <!-- Calendar -->
-      <img src="icons/calendar-days.svg" class="sidebar-icon">
+      <img src="icons/calendar-days.svg" class="sidebar-icon" alt="Calendar Icon">
     </div>
-
     <div class="sidebar-icon">
-      <!-- Shows -->
-      <img src="icons/tv-minimal.svg" class="sidebar-icon">
+      <img src="icons/tv-minimal.svg" class="sidebar-icon" alt="TV Icon">
     </div>
-
     <div class="sidebar-icon">
-      <!-- Movies -->
-      <img src="icons/clapperboard.svg" class="sidebar-icon">
+      <img src="icons/clapperboard.svg" class="sidebar-icon" alt="Movies Icon">
     </div>
-
     <div class="sidebar-icon">
-      <!-- Add -->
-      <img src="icons/plus.svg" class="sidebar-icon">
+      <img src="icons/plus.svg" class="sidebar-icon" alt="Add Icon">
     </div>
   </aside>
 
   <!-- Hero Section -->
   <section class="hero-section">
-  <img id="hero-image" src="images/banner.jpg" alt="Banner" class="hero-image" />
-  <div class="fade-overlay"></div>
+    <img id="hero-image" src="images/banner.jpg" alt="Banner" class="hero-image" />
+    <div class="fade-overlay"></div>
+    <div id="hero-info" class="hero-info"></div>
+  </section>
 
-  <div id="hero-info" class="hero-info">
-    <!-- content will be filled by JS -->
-  </div>
-</section>
-
-
+  <!-- Movie Thumbnails -->
   <main class="movie-thumbnails">
     <b>Trending Now</b>
     <div class="thumbnail-row">
-        <img src="images/thumbnails/movie-1.jpg" alt="">
-        <img src="images/thumbnails/movie-2.jpg" alt="">
-        <img src="images/thumbnails/movie-3.jpg" alt="">
-        <img src="images/thumbnails/movie-4.jpg" alt="">
-        <img src="images/thumbnails/movie-5.jpg" alt="">
-        <img src="images/thumbnails/movie-6.png" alt="">
-        <img src="images/thumbnails/movie-7.jpg" alt="">
-        <img src="images/thumbnails/movie-8.webp" alt="">
-        <img src="images/thumbnails/movie-9.jpg" alt="">
-        <img src="images/thumbnails/movie-10.jpg" alt="">
+      <img src="images/thumbnails/movie-1.jpg" alt="">
+      <img src="images/thumbnails/movie-2.jpg" alt="">
+      <img src="images/thumbnails/movie-3.jpg" alt="">
+      <img src="images/thumbnails/movie-4.jpg" alt="">
+      <img src="images/thumbnails/movie-5.jpg" alt="">
+      <img src="images/thumbnails/movie-6.png" alt="">
+      <img src="images/thumbnails/movie-7.jpg" alt="">
+      <img src="images/thumbnails/movie-8.webp" alt="">
+      <img src="images/thumbnails/movie-9.jpg" alt="">
+      <img src="images/thumbnails/movie-10.jpg" alt="">
     </div>
 
     <b>Popular on Netflix</b>
     <div class="thumbnail-row">
-        <img src="images/thumbnails/movie-11.jpg" alt="">
-        <img src="images/thumbnails/movie-12.jpg" alt="">
-        <img src="images/thumbnails/movie-13.jpg" alt="">
-        <img src="images/thumbnails/movie-14.jpg" alt="">
-        <img src="images/thumbnails/movie-15.jpg" alt="">
-        <img src="images/thumbnails/movie-16.jpeg" alt="">
-        <img src="images/thumbnails/movie-17.jpg" alt="">
-        <img src="images/thumbnails/movie-18.jpg" alt="">
-        <img src="images/thumbnails/movie-19.jpg" alt="">
-        <img src="images/thumbnails/movie-20.jpeg" alt="">
+      <img src="images/thumbnails/movie-11.jpg" alt="">
+      <img src="images/thumbnails/movie-12.jpg" alt="">
+      <img src="images/thumbnails/movie-13.jpg" alt="">
+      <img src="images/thumbnails/movie-14.jpg" alt="">
+      <img src="images/thumbnails/movie-15.jpg" alt="">
+      <img src="images/thumbnails/movie-16.jpeg" alt="">
+      <img src="images/thumbnails/movie-17.jpg" alt="">
+      <img src="images/thumbnails/movie-18.jpg" alt="">
+      <img src="images/thumbnails/movie-19.jpg" alt="">
+      <img src="images/thumbnails/movie-20.jpeg" alt="">
     </div>
-
   </main>
 
-</body>
-<footer class="footer">
-  <p>© 2023 Netflix Clone. All rights reserved.</p>
-  <p>Created by <a href="https://adebowale-david.netlify.app" target="_blank">Adebowale David</a></p>
-</footer>
-<style>
-  @import url('style.css'); 
-  .footer {
-    background: #181818;
-    color: #b3b3b3;
-    padding: 32px 0 24px 0;
-    text-align: center;
-    font-size: 1rem;
-    border-top: 1px solid #232323;
-    margin-top: 48px;
-    letter-spacing: 0.02em;
-    box-shadow: 0 -2px 16px rgba(0,0,0,0.25);
-  }
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2023 Netflix Clone. All rights reserved.</p>
+    <p>Created by <a href="https://adebowale-david.netlify.app" target="_blank">Adebowale David</a></p>
+  </footer>
 
-  .footer a {
-    color: #e50914;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
-  }
+  <!-- JavaScript -->
+  <script>
+    const rows = document.querySelectorAll('.thumbnail-row');
 
-  .footer a:hover {
-    color: #fff;
-    text-decoration: underline;
-  }
+    rows.forEach(row => {
+      let isMouseDown = false;
+      let startX;
+      let scrollStart;
 
-  .footer p {
-    margin: 8px 0;
-    line-height: 1.6;
-  }
-</style>
+      // PC - mouse
+      row.addEventListener('mousedown', (e) => {
+        isMouseDown = true;
+        row.classList.add('grabbing');
+        startX = e.clientX;
+        scrollStart = row.scrollLeft;
+      });
 
-<script>
- const rows = document.querySelectorAll('.thumbnail-row');
+      document.addEventListener('mouseup', () => {
+        isMouseDown = false;
+        row.classList.remove('grabbing');
+      });
 
-  rows.forEach(row => {
-    let isMouseDown = false;
-    let startX;
-    let scrollStart;
+      document.addEventListener('mousemove', (e) => {
+        if (!isMouseDown) return;
+        e.preventDefault();
+        const deltaX = e.clientX - startX;
+        row.scrollLeft = scrollStart - deltaX;
+      });
 
-    // PC - mouse
-    row.addEventListener('mousedown', (e) => {
-      isMouseDown = true;
-      row.classList.add('grabbing');
-      startX = e.clientX;
-      scrollStart = row.scrollLeft;
+      // Mobile - touch
+      row.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        scrollStart = row.scrollLeft;
+      });
+
+      row.addEventListener('touchmove', (e) => {
+        const deltaX = e.touches[0].clientX - startX;
+        row.scrollLeft = scrollStart - deltaX;
+      });
     });
 
-    document.addEventListener('mouseup', () => {
-      isMouseDown = false;
-      row.classList.remove('grabbing');
-    });
-
-    document.addEventListener('mousemove', (e) => {
-      if (!isMouseDown) return;
-      e.preventDefault();
-      const deltaX = e.clientX - startX;
-      row.scrollLeft = scrollStart - deltaX;
-    });
-
-    // Mobile - touch
-    row.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
-      scrollStart = row.scrollLeft;
-    });
-
-    row.addEventListener('touchmove', (e) => {
-      const deltaX = e.touches[0].clientX - startX;
-      row.scrollLeft = scrollStart - deltaX;
-    });
-  });
-
-  // Banner Changing Functionality 
+    // Banner Changing Functionality 
     const banners = [
-    {
-      title: "DAREDEVIL",
-      year: "2020",
-      match: "98%",
-      rating: "18+",
-      seasons: "6 Seasons",
-      desc: "Blinded as a young boy, Matt Murdock fights injustice by day as a lawyer and by night as Daredevil.",
-      award: "Emmy Winner – Outstanding Stunt Coordination (2016)",
-      image: "images/banner.jpg"
-    },
-    {
-      title: "STRANGER THINGS",
-      year: "2022",
-      match: "95%",
-      rating: "16+",
-      seasons: "4 Seasons",
-      desc: "When a young boy disappears, a small town uncovers a mystery involving secret experiments and supernatural forces.",
-      award: "Emmy Winner – Outstanding Drama Series (2022)",
-      image: "images/stranger-things.jpg"
-    },
-    {
-      title: "THE WITCHER",
-      year: "2021",
-      match: "91%",
-      rating: "18+",
-      seasons: "3 Seasons",
-      desc: "Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.",
-      award: "Top Pick – Fan Favorite Fantasy (2021)",
-      image: "images/witcher.jpg"
+      {
+        title: "DAREDEVIL",
+        year: "2020",
+        match: "98%",
+        rating: "18+",
+        seasons: "6 Seasons",
+        desc: "Blinded as a young boy, Matt Murdock fights injustice by day as a lawyer and by night as Daredevil.",
+        award: "Emmy Winner – Outstanding Stunt Coordination (2016)",
+        image: "images/banner.jpg"
+      },
+      {
+        title: "STRANGER THINGS",
+        year: "2022",
+        match: "95%",
+        rating: "16+",
+        seasons: "4 Seasons",
+        desc: "When a young boy disappears, a small town uncovers a mystery involving secret experiments and supernatural forces.",
+        award: "Emmy Winner – Outstanding Drama Series (2022)",
+        image: "images/stranger-things.jpg"
+      },
+      {
+        title: "THE WITCHER",
+        year: "2021",
+        match: "91%",
+        rating: "18+",
+        seasons: "3 Seasons",
+        desc: "Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.",
+        award: "Top Pick – Fan Favorite Fantasy (2021)",
+        image: "images/witcher.jpg"
+      }
+    ];
+
+    let current = 0;
+
+    function updateHero() {
+      const image = document.getElementById("hero-image");
+      image.style.opacity = 0;
+
+      setTimeout(() => {
+        const banner = banners[current];
+        image.src = banner.image;
+
+        document.getElementById("hero-info").innerHTML = `
+          <p class="title">${banner.title}</p>
+          <div class="container-1">
+            <b class="match">${banner.match} Match <span class="match-span">${banner.year}</span></b>
+            <p class="age-rating">${banner.rating}</p>
+            <p class="seasons">${banner.seasons}</p>
+          </div>
+          <p class="description">${banner.desc}</p>
+          <div class="award-container">
+            <div class="award">
+              <img src="icons/trophy.svg" alt="Award" />
+            </div>
+            <p class="award-title">${banner.award}</p>
+          </div>
+        `;
+
+        image.style.opacity = 1;
+        current = (current + 1) % banners.length;
+      }, 300);
     }
-  ];
 
-  let current = 0;
+    updateHero();
+    setInterval(updateHero, 6000);
+  </script>
 
-  
-function updateHero() {
-  const image = document.getElementById("hero-image");
-  image.style.opacity = 0;
-
-  setTimeout(() => {
-    const banner = banners[current];
-    image.src = banner.image;
-
-    document.getElementById("hero-info").innerHTML = `
-      <p class="title">${banner.title}</p>
-      <div class="container-1">
-        <b class="match">${banner.match} Match <span class="match-span">${banner.year}</span></b>
-        <p class="age-rating">${banner.rating}</p>
-        <p class="seasons">${banner.seasons}</p>
-      </div>
-      <p class="description">${banner.desc}</p>
-      <div class="award-container">
-        <div class="award">
-          <img src="icons/trophy.svg" alt="Award" />
-        </div>
-        <p class="award-title">${banner.award}</p>
-      </div>
-    `;
-
-    image.style.opacity = 1;
-    current = (current + 1) % banners.length;
-  }, 300);
-}
-
-
-  // Initial load
-  updateHero();
-
-  // Change every 6 seconds
-  setInterval(updateHero, 6000);
-
-
-  
-</script>
+</body>
 </html>
