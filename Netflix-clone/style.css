@@ -285,3 +285,35 @@ main  b{
   display: block;
   transition: opacity 1s ease;
 }
+
+
+.footer {
+    background: #181818;
+    color: #b3b3b3;
+    padding: 32px 0 24px 0;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 1px solid #232323;
+    margin-top: 48px;
+    letter-spacing: 0.02em;
+    box-shadow: 0 -2px 16px rgba(0,0,0,0.25);
+}
+
+.footer a {
+    color: #e50914;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+
